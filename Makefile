@@ -5,4 +5,6 @@ brain-games:
 publish:
 	npm publish --dry-run
 lint:
-	npx eslint
+	npx eslint .
+lint-fix:
+	eslint --fix --ext .js,.jsx .
