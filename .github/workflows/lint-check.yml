@@ -1,18 +1,27 @@
+# Name of WF
 name: eslint checker
-
+# Trigger
 on:
   - push
 
 env:
   CI: true
-
+# The type of machine to run the job on
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+      # https://github.com/actions/checkout
       - uses: actions/checkout@v2
-      - name: Check Linter
+        # Step's name
+      - name: Use Node.js ${{ matrix.node-version }}
+
+        # https://github.com/actions/setup-node
+        uses: actions/setup-node@v2
+        # The Node.js version to configure
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       - run: make install
       - run: make lint
-
-
