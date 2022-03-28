@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run eslint
-        run: make lint
+      - run: make lint
