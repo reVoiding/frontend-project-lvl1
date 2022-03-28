@@ -1,4 +1,4 @@
-name: Node CI
+name: eslint checker
 
 on:
   - push
@@ -13,11 +13,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [17.x]
 
     steps:
 
-      - uses: hexlet/project-action@release
+      - uses: actions/checkout@v2
       - name: Check Linter
 
         uses: actions/setup-node@v2
