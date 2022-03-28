@@ -2,10 +2,13 @@
 
 name: lint-check
 
-on: push
+on: 
+ push :
+  branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Run eslint
         run: make lint
