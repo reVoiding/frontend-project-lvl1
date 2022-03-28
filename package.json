@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/reVoiding/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/reVoiding/frontend-project-lvl1#readme"
+  "type": "module",
+  "homepage": "https://github.com/reVoiding/frontend-project-lvl1#readme",
+  "devDependencies": {
+    "prettier": "^2.6.1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
 }
