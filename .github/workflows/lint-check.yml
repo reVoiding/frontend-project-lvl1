@@ -1,14 +1,29 @@
-# This is a basic workflow to help you get started with Actions
+name: Node CI
 
-name: lint-check
+on:
+  - push
 
-on: 
- push :
-  branches: [ main ]
+env:
+  CI: true
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
+
       - uses: actions/checkout@v2
-      - name: Run eslint
-        run: make lint
+
+      - name: Check Linter
+
+        uses: actions/setup-node@v2
+
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: make lint
