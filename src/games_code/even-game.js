@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync'
 
+//Чётность
+
 const evenGame = () => {
   // Start
   console.log('Welcome to the Brain Games!')

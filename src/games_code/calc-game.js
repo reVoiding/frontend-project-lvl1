@@ -15,7 +15,7 @@ const calc = (num1, num2, operator) => {
 
 // question - answer
 const questionAnswer = () => {
-  const operators = ["*", "+", "-"]
+  const operators = ['*', '+', '-']
   const newNum1 = randNum(1, 11)
   const newNum2 = randNum(1, 11)
   const nextOperator = operators[randNum(0, 3)]
