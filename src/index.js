@@ -9,7 +9,7 @@ export const randNum = (min, max) =>
 export const generalGame = (rules, questAnswer) => {
   // Salutation
   console.log('Welcome to the Brain Games!')
-  const userName = readlineSync.question('May I have your name?')
+  const userName = readlineSync.question('May I have your name? ')
   console.log(`Hello, ${userName}!`)
   console.log(rules)
 
@@ -17,7 +17,7 @@ export const generalGame = (rules, questAnswer) => {
     const [question, answer] = questAnswer()
     console.log(`Question: ${question}`)
 
-    const userAnswer = readlineSync.question('Your answer:')
+    const userAnswer = readlineSync.question('Your answer: ')
 
     if (userAnswer === answer) {
       console.log('Correct!')
