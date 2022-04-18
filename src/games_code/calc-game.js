@@ -3,10 +3,10 @@ import { randNum, generalGame } from '../index.js';
 // Калькулятор
 // right answer
 const calc = (num1, num2, operator) => {
-  if (operator === '+') {
+  if (operator === "+") {
     return num1 + num2;
   }
-  if (operator === '-') {
+  if (operator === "-") {
     return num1 - num2;
   }
   return num1 * num2;
