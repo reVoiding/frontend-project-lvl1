@@ -4,4 +4,4 @@
 ![Link](https://github.com/reVoiding/frontend-project-lvl1/actions/workflows/lint-check.yml/badge.svg)
 
 
-https://asciinema.org/connect/6ace8dbb-9688-41fe-8aec-ceedefe5e47a
+https://asciinema.org/a/ZdDXeJ2AztBK4iJ30ugtoxJtg
