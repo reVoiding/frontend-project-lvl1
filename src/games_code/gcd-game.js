@@ -1,9 +1,9 @@
 import { randNum, generalGame } from '../index.js';
 
-//Игра НОД
+// Игра НОД
 const rules = 'Find the greatest common divisor of given numbers.';
 
-//Наибольший общий делитель
+// Наибольший общий делитель
 const greatComDiv = (x, y) => {
   if (y === 0) {
     return x;

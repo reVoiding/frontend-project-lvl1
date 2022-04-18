@@ -1,10 +1,9 @@
 import readlineSync from 'readline-sync';
 
-//GeneralModule
+// GeneralModule
 
 // Random
-export const randNum = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+export const randNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const generalGame = (rules, questAnswer) => {
   // Salutation
@@ -23,7 +22,7 @@ export const generalGame = (rules, questAnswer) => {
       console.log('Correct!');
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`,
       );
       console.log(`Let's try again, ${userName}!`);
       return;

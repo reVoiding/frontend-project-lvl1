@@ -1,13 +1,13 @@
 import { randNum, generalGame } from '../index.js';
 
-//Игра "Простое ли число?"
+// Игра "Простое ли число?"
 const rules = 'Answer "yes" if given number is Prime. Otherwise answer "no".';
 
 const primeNum = (num) => {
   if (num < 2) {
     return false;
   }
-  for (let i = 2; i <= num / 2; i++) {
+  for (let i = 2; i <= num / 2; i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -15,7 +15,7 @@ const primeNum = (num) => {
   return true;
 };
 
-//вопрос-ответ
+// вопрос-ответ
 const questionAnswer = () => {
   const number = randNum(1, 100);
   const question = number;
