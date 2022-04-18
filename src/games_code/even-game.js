@@ -17,7 +17,7 @@ const evenGame = () => {
   const randNum = (min, max) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
-//Hi and rules
+//Hi_and_rules
   console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
