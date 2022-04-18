@@ -33,6 +33,7 @@ const evenGame = () => {
         `'${userAnswer}' is wrong answer ;( Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${userName}!`);
+      if (i -= 1 < 0) i = 0;
     }
   }
   // Bravo!
