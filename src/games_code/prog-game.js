@@ -35,8 +35,8 @@ const questionAnswer = () => {
   return [question, answer]
 }
 
-const rule = 'What number is missing in the progression?'
+const rules = 'What number is missing in the progression?'
 
-const brainProgression = () => generalGame(rule, questionAnswer)
+const brainProgression = () => generalGame(rules, questionAnswer)
 
 export default brainProgression

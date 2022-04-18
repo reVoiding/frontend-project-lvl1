@@ -1,7 +1,7 @@
 import { randNum, generalGame } from '../index.js'
 
 //Игра НОД
-const rule = 'Find the greatest common divisor of given numbers.';
+const rules = 'Find the greatest common divisor of given numbers.';
 
 //Наибольший общий делитель
 const greatComDiv = (x, y) => {
@@ -20,6 +20,6 @@ const questionAnswer = () => {
   return [question, answer];
 };
 
-const brainGcd = () => generalGame(rule, questionAnswer);
+const brainGcd = () => generalGame(rules, questionAnswer);
 
 export default brainGcd;

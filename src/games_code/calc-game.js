@@ -25,8 +25,8 @@ const questionAnswer = () => {
   return [question, answer]
 }
 
-const rule = 'What is the result of the expression?'
+const rules = 'What is the result of the expression?'
 
-const brainCalc = () => generalGame(rule, questionAnswer)
+const brainCalc = () => generalGame(rules, questionAnswer)
 
 export default brainCalc
