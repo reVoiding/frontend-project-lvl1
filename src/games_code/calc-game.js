@@ -1,7 +1,6 @@
 import { randNum, generalGame } from '../index.js';
 
 //Калькулятор
-
 //right answer
 const calc = (num1, num2, operator) => {
   if (operator === '+') {
@@ -13,7 +12,7 @@ const calc = (num1, num2, operator) => {
   return num1 * num2;
 };
 
-//question - answer
+//question-answer
 const questionAnswer = () => {
   const operators = ['*', '+', '-'];
   const newNum1 = randNum(1, 11);
