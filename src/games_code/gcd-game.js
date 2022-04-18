@@ -1,4 +1,4 @@
-import { randNum, generalGame } from '../index.js'
+import { randNum, generalGame } from '../index.js';
 
 //Игра НОД
 const rules = 'Find the greatest common divisor of given numbers.';
@@ -12,8 +12,8 @@ const greatComDiv = (x, y) => {
 };
 
 const questionAnswer = () => {
-  const newNum1 = randNum(1, 111)
-  const newNum2 = randNum(1, 111)
+  const newNum1 = randNum(1, 111);
+  const newNum2 = randNum(1, 111);
   const question = `${newNum1} ${newNum2}`;
 
   const answer = String(greatComDiv(newNum1, newNum2));

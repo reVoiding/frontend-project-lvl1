@@ -1,42 +1,42 @@
-import { generalGame, randNum } from "../index.js";
+import { generalGame, randNum } from '../index.js';
 
 // Прогрессия
 const progressStart = (start, length, counter) => {
-  const result = []
+  const result = [];
   for (let i = 0; i < length; i += 1) {
-    result.push(start + counter * i)
+    result.push(start + counter * i);
   }
-  return result
-}
+  return result;
+};
 
 // меняем элемент прогрессии
 const progressNoElement = (progression, item) => {
-  const newProgress = progression.slice(0)
-  newProgress[item] = '..'
-  return newProgress.join(' ')
-}
+  const newProgress = progression.slice(0);
+  newProgress[item] = '..';
+  return newProgress.join(' ');
+};
 
 // question - answer
 const questionAnswer = () => {
-  const num1 = randNum(1, 10)
-  const randGo = randNum(1, 5)
-  const progressSize = randNum(5, 10)
-  const randEl = randNum(1, progressSize)
+  const num1 = randNum(1, 10);
+  const randGo = randNum(1, 5);
+  const progressSize = randNum(5, 10);
+  const randEl = randNum(1, progressSize);
   // Генерим прогрессию
-  const progression = progressStart(num1, progressSize, randGo)
+  const progression = progressStart(num1, progressSize, randGo);
 
   // Удаляем элемент - вопрос
-  const question = progressNoElement(progression, randEl)
+  const question = progressNoElement(progression, randEl);
 
   // Получаем  ответ - спрятанный элемент
-  const delElement = num1 + randGo * randEl
-  const answer = String(delElement)
+  const delElement = num1 + randGo * randEl;
+  const answer = String(delElement);
 
-  return [question, answer]
-}
+  return [question, answer];
+};
 
-const rules = 'What number is missing in the progression?'
+const rules = 'What number is missing in the progression?';
 
-const brainProgression = () => generalGame(rules, questionAnswer)
+const brainProgression = () => generalGame(rules, questionAnswer);
 
-export default brainProgression
+export default brainProgression;
