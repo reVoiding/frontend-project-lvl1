@@ -15,7 +15,7 @@ const primeNum = (num) => {
   return true;
 };
 
-// вопрос-ответ
+//вопрос-ответ
 const questionAnswer = () => {
   const number = randNum(1, 100);
   const question = number;

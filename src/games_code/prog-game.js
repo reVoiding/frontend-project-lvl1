@@ -1,6 +1,6 @@
 import { generalGame, randNum } from '../index.js';
 
-// Прогрессия
+//Прогрессия
 const progressStart = (start, length, counter) => {
   const result = [];
   for (let i = 0; i < length; i += 1) {
@@ -9,26 +9,26 @@ const progressStart = (start, length, counter) => {
   return result;
 };
 
-// меняем элемент прогрессии
+//меняем элемент прогрессии
 const progressNoElement = (progression, item) => {
   const newProgress = progression.slice(0);
   newProgress[item] = '..';
   return newProgress.join(' ');
 };
 
-// question - answer
+//question - answer
 const questionAnswer = () => {
   const num1 = randNum(1, 10);
   const randGo = randNum(1, 5);
   const progressSize = randNum(5, 10);
   const randEl = randNum(1, progressSize);
-  // Генерим прогрессию
+  //Генерим прогрессию
   const progression = progressStart(num1, progressSize, randGo);
 
-  // Удаляем элемент - вопрос
+  //Удаляем элемент - вопрос
   const question = progressNoElement(progression, randEl);
 
-  // Получаем  ответ - спрятанный элемент
+  //Получаем  ответ - спрятанный элемент
   const delElement = num1 + randGo * randEl;
   const answer = String(delElement);
 
