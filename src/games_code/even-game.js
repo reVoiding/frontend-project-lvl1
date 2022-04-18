@@ -24,11 +24,11 @@ const evenGame = () => {
     const num = randNum(1, 99); // генерим случайно число
     const correctAnswer = isEven(num); // проверяем первое число на четность
     console.log(`Question: ${num}`); // задаем вопрос
-    const userAnswer = readlineSync.question('Your answer: '); // получаем ответ игрока
+    const userAnswer = readlineSync.question('Your answer:'); // получаем ответ игрока
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${userAnswer}'.`);
       console.log(`Let's try again, ${userName}!`); // отвечаем игроку
       return;
     }
