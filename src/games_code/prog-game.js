@@ -23,10 +23,10 @@ const getQuestionAnswer = () => {
   const progressSize = getRandomNumber(5, 10);
   const element = getRandomNumber(1, progressSize);
   // Генерим прогрессию
-  const progression = progressStart(num1, progressSize, randGo);
+  const progression = progressStart(num1, progressSize, step);
 
   // Удаляем элемент - вопрос
-  const question = progressNoElement(progression, randEl);
+  const question = progressNoElement(progression, element);
 
   // Получаем  ответ - спрятанный элемент
   const delElement = num1 + step * element;

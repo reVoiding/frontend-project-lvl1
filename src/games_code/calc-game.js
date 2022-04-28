@@ -4,20 +4,20 @@ import { getRandomNumber, generalGame } from '../index.js';
 // right answer
 const calc = (num1, num2, operator) => {
   switch (operator) {
-    case  "+":
+    case '+':
       return num1 + num2;
-    case "-":
+    case '-':
       return num1 - num2;
-    case "*":
+    case '*':
       return num1 * num2;
-    default :
+    default:
       return null;
   }
 };
 
 // question-answer
 const getQuestionAnswer = () => {
-  const operators = ["*", "+", "-"];
+  const operators = ['*', '+', '-'];
   const newNum1 = getRandomNumber(1, 11);
   const newNum2 = getRandomNumber(1, 11);
   const nextOperator = operators[getRandomNumber(0, 2)];
