@@ -1,4 +1,4 @@
-import { generalGame, randNum } from '../index.js';
+import { generalGame, getRandomNumber } from '../index.js';
 
 // Прогрессия
 const progressStart = (start, length, counter) => {
@@ -17,11 +17,11 @@ const progressNoElement = (progression, item) => {
 };
 
 // question - answer
-const questionAnswer = () => {
-  const num1 = randNum(1, 10);
-  const randGo = randNum(1, 5);
-  const progressSize = randNum(5, 10);
-  const randEl = randNum(1, progressSize);
+const getQuestionAnswer = () => {
+  const num1 = getRandomNumber(1, 10);
+  const step = getRandomNumber(1, 5);
+  const progressSize = getRandomNumber(5, 10);
+  const element = getRandomNumber(1, progressSize);
   // Генерим прогрессию
   const progression = progressStart(num1, progressSize, randGo);
 
@@ -29,7 +29,7 @@ const questionAnswer = () => {
   const question = progressNoElement(progression, randEl);
 
   // Получаем  ответ - спрятанный элемент
-  const delElement = num1 + randGo * randEl;
+  const delElement = num1 + step * element;
   const answer = String(delElement);
 
   return [question, answer];
@@ -37,6 +37,6 @@ const questionAnswer = () => {
 
 const rules = 'What number is missing in the progression?';
 
-const brainProgression = () => generalGame(rules, questionAnswer);
+const brainProgression = () => generalGame(rules, getQuestionAnswer);
 
 export default brainProgression;

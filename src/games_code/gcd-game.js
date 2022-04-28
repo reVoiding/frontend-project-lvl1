@@ -1,4 +1,4 @@
-import { randNum, generalGame } from '../index.js';
+import { getRandomNumber, generalGame } from '../index.js';
 
 // Игра НОД
 const rules = 'Find the greatest common divisor of given numbers.';
@@ -11,15 +11,15 @@ const greatComDiv = (x, y) => {
   return greatComDiv(y, x % y);
 };
 
-const questionAnswer = () => {
-  const newNum1 = randNum(1, 111);
-  const newNum2 = randNum(1, 111);
+const getQuestionAnswer = () => {
+  const newNum1 = getRandomNumber(1, 111);
+  const newNum2 = getRandomNumber(1, 111);
   const question = `${newNum1} ${newNum2}`;
 
   const answer = String(greatComDiv(newNum1, newNum2));
   return [question, answer];
 };
 
-const brainGcd = () => generalGame(rules, questionAnswer);
+const brainGcd = () => generalGame(rules, getQuestionAnswer);
 
 export default brainGcd;

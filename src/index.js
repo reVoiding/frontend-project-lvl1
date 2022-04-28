@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 // GeneralModule
 
 // Random
-export const randNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const generalGame = (rules, questAnswer) => {
   // Salutation

@@ -1,9 +1,9 @@
-import { randNum, generalGame } from '../index.js';
+import { getRandomNumber, generalGame } from '../index.js';
 
 // Игра "Простое ли число?"
 const rules = 'Answer "yes" if given number is Prime. Otherwise answer "no".';
 
-const primeNum = (num) => {
+const getPrimeNum = (num) => {
   if (num < 2) {
     return false;
   }
@@ -16,12 +16,12 @@ const primeNum = (num) => {
 };
 
 // вопрос-ответ
-const questionAnswer = () => {
-  const number = randNum(1, 100);
+const getQuestionAnswer = () => {
+  const number = getRandomNumber(1, 100);
   const question = number;
-  const answer = primeNum(number) ? 'yes' : 'no';
+  const answer = getPrimeNum(number) ? 'yes' : 'no';
   return [question, answer];
 };
-const brainPrime = () => generalGame(rules, questionAnswer);
+const brainPrime = () => generalGame(rules, getQuestionAnswer);
 
 export default brainPrime;
